@@ -25,7 +25,7 @@ export const Signin = () => {
         }} placeholder="123456" label={"Password"} />
         <div className="pt-4">
           <Button onClick={async ()=>{
-            const response=await axios.post("http://localhost:3000/api/v1/user/signin",{
+            const response=await axios.post("https://zip-pay-api.vercel.app/api/v1/user/signin",{
               username,password
             })
             localStorage.setItem("token", response.data.token)
